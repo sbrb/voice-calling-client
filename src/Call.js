@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('https://voice-calling-server-git-main-sbrs-projects.vercel.app');
+const socket = io('https://voice-calling-server.vercel.app');
 
 export default function Call() {
     const [status, setStatus] = useState('idle'); // idle, searching, inCall
