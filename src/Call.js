@@ -101,7 +101,7 @@ export default function Call() {
             setMuted(!muted);
         }
     };
-
+    console.log("remoteRef", remoteRef)
     return (
         <div className="call-container">
             {status === 'idle' && <button onClick={handleCall}>Call</button>}
@@ -113,10 +113,10 @@ export default function Call() {
                 </>
             )}
 
-            {status === 'inCall' && (
+            {status === "inCall" && (
                 <>
                     <p className="time-counter">Call time: {time}s</p>
-                    <button onClick={toggleMute}>{muted ? 'Unmute' : 'Mute'}</button>
+                    <button onClick={toggleMute}>{muted ? "Unmute" : "Mute"}</button>
                     <button onClick={endCall}>End Call</button>
                     <audio ref={localRef} autoPlay muted />
                     <audio ref={remoteRef} autoPlay />
